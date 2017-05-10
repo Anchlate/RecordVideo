@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wxx-u5-t5g">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mCX-t0-YHr" userLabel="viewContrainer">
+                                <rect key="frame" x="20" y="20" width="560" height="480"/>
+                                <color key="backgroundColor" red="0.56809363034764804" green="1" blue="0.97784884616787793" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuO-6f-L5b" userLabel="录制">
+                                <rect key="frame" x="272" y="522" width="56" height="50"/>
+                                <color key="backgroundColor" red="0.13094450622658743" green="0.17460157625893893" blue="0.95991492146596857" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8hF-u8-CU6"/>
+                                    <constraint firstAttribute="width" constant="56" id="p7w-Hi-szE"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="tapeVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n7W-FC-dEp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.31260225785340312" green="0.31260225785340312" blue="0.31260225785340312" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="mCX-t0-YHr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Em6-yl-hkj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mCX-t0-YHr" secondAttribute="bottom" constant="100" id="Kd3-ot-xpz"/>
+                            <constraint firstItem="tuO-6f-L5b" firstAttribute="centerX" secondItem="mCX-t0-YHr" secondAttribute="centerX" id="PwZ-kC-bya"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mCX-t0-YHr" secondAttribute="trailing" id="WQz-GU-zcl"/>
+                            <constraint firstItem="mCX-t0-YHr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="s9Z-Ym-Epu"/>
+                            <constraint firstItem="tuO-6f-L5b" firstAttribute="top" secondItem="mCX-t0-YHr" secondAttribute="bottom" constant="22" id="sij-RD-FQl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="eBJ-2A-gf5"/>
+                    <connections>
+                        <outlet property="viewContainer" destination="mCX-t0-YHr" id="LnX-aD-DUr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1142" y="418"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="l2x-49-yFv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wxx-u5-t5g" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gbb-yf-rhw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ney-GQ-WXv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IB2-Ip-MpK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="442" y="418"/>
+        </scene>
+    </scenes>
+</document>
